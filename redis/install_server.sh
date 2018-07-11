@@ -114,7 +114,7 @@ echo "Cli Executable : $CLI_EXEC"
 read -p "这些都对吗? 是的话，请按 Enter 继续，或者使用 Ctrl+C 退出." _UNUSED_
 
 mkdir -p `dirname "$REDIS_CONFIG_FILE"` || die "可能无法创建配置目录"
-# mkdir -p `dirname "$REDIS_LOG_FILE"` || die "可能无法创建日志目录"
+mkdir -p `dirname "$REDIS_LOG_FILE"` || die "可能无法创建日志目录"
 mkdir -p "$REDIS_DATA_DIR" || die "可能无法创建数据目录"
 
 #render the templates
